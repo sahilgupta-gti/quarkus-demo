@@ -1,0 +1,11 @@
+quarkus:
+  http:
+    port: 9000
+  application:
+    name: quarkus-demo
+  log:
+    level: DEBUG
+"%prod":
+  quarkus:
+    http:
+      port: 8000
