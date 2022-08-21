@@ -5,7 +5,17 @@ quarkus:
     name: quarkus-demo
   log:
     level: DEBUG
+  mongodb:
+    connection-string: mongodb://localhost:27017
+application:
+  db:
+    name: student
+    collection: students
 "%prod":
   quarkus:
     http:
       port: 8000
+#  app:
+#    db:
+#      name: student
+#      collection: students
