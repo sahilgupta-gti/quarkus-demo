@@ -1,23 +1,23 @@
 package com.example.dto;
 
-
+import com.example.entity.Vehicle;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.List;
+
 @Getter
 @Setter
-@NoArgsConstructor
 @ToString
-public class StudentDto {
+@NoArgsConstructor
+public class CompanyDto {
 
-    private String enrollmentNumber;
+    private String id;
     private String name;
-    private int age;
-    private String className;
     private String type;
-    private String source;
-//    private float marks;
+    private List<Object> vehicles;
+
 
 }

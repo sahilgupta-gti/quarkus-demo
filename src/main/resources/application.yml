@@ -7,6 +7,14 @@ quarkus:
     level: DEBUG
   mongodb:
     connection-string: mongodb://localhost:27017
+    # Need to study about below properties
+    read-concern: local
+    read-preference: nearest
+#    credentials:
+#      username: root
+#      password: root
+#      auth-source: admin
+#      auth-mechanism: SCRAM_SHA_1
 application:
   db:
     name: student

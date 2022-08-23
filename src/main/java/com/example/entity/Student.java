@@ -17,5 +17,6 @@ public class Student {
     private String className;
     private String type;
     private String source;
+//    private float marks;
 }
 

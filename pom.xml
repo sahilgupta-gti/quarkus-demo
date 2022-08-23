@@ -63,9 +63,14 @@
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-container-image-docker</artifactId>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>io.quarkus</groupId>-->
+<!--            <artifactId>quarkus-mongodb-client</artifactId>-->
+<!--        </dependency>-->
+        <!-- Added to support mongodb with Panache -->
         <dependency>
             <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-mongodb-client</artifactId>
+            <artifactId>quarkus-mongodb-panache</artifactId>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
@@ -99,11 +104,25 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${compiler-plugin.version}</version>
                 <configuration>
+                    <!-- Added to support mongodb with panache -->
+<!--                    <annotationProcessorPaths>-->
+<!--                        &lt;!&ndash; Your existing annotation processor(s)... &ndash;&gt;-->
+<!--                        <path>-->
+<!--                            <groupId>io.quarkus</groupId>-->
+<!--                            <artifactId>quarkus-panache-common</artifactId>-->
+<!--                            <version>${quarkus.platform.version}</version>-->
+<!--                        </path>-->
+<!--                    </annotationProcessorPaths>-->
 <!--                    <annotationProcessorPaths>-->
 <!--                        <path>-->
 <!--                            <groupId>org.projectlombok</groupId>-->
 <!--                            <artifactId>lombok</artifactId>-->
 <!--                            <version>${project.lombok.version}</version>-->
+<!--                        </path>-->
+<!--                        <path>-->
+<!--                            <groupId>io.quarkus</groupId>-->
+<!--                             <artifactId>quarkus-panache-common</artifactId>-->
+<!--                            <version>${quarkus.platform.version}</version>-->
 <!--                        </path>-->
 <!--                    </annotationProcessorPaths>-->
                     <compilerArgs>

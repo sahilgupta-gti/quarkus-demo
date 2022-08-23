@@ -1,7 +1,7 @@
 package com.example.service;
 
+import com.example.entity.MyCodecProvider;
 import com.example.entity.Student;
-import com.example.mapper.AbstractStudentMapperImpl;
 import com.example.mapper.StudentMapperService;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
@@ -34,7 +34,9 @@ public class StudentServiceImpl implements StudentService {
     private MongoCollection<Document> getCollection() {
         log.info("getCollection: " + collectionName);
         log.info("getDatabase: " + dbName);
-        return mongoClient.getDatabase(dbName).getCollection(collectionName);
+        return mongoClient.getDatabase(dbName)
+                .getCollection(collectionName)
+                .withCodecRegistry(MyCodecProvider.getCodecProvider());
     }
 
     @Override
